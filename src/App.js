@@ -17,7 +17,13 @@ function App() {
       >
         Change to {newButtonColor}
       </button>
-      <input type="checkbox" onClick={(e)=> setDisabled(e.target.checked)}/>
+      <input 
+        id="enable-button-checkbox"
+        type="checkbox" 
+        defaultChecked={disabled}
+        aria-checked={disabled}
+        onChange={(e)=> setDisabled(e.target.checked)}
+        />
     </div>
   );
 }
